@@ -1,6 +1,6 @@
 @font-face {
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  src: url(../fonts/OpenSans-Regular.woff2);
+  src: url(../fonts/OpenSans-Bold.woff2);
 }
 
 /*Styles reset*/
@@ -58,10 +58,11 @@ select {
 }
 
 /*End of styles reset*/
+/*Header styles*/
 
 .noemi-header {
   position: relative;
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
+  background-image: url(../img/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -80,7 +81,7 @@ select {
   bottom: 0;
 }
 
-.content {
+.header {
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
@@ -100,7 +101,7 @@ select {
 .noemi-logo {
   width: 180px;
   height: 42px;
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg);
+  background-image: url(../svg/noemi-logo.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -134,20 +135,113 @@ a:hover {
   padding-top: 105px;
   padding-bottom: 125px;
   font-size: 45px;
-  display: inline-block;
   line-height: 75px;
   width: 700px;
   font-family: "Open sans", "Arial", sans-serif;
+  margin: 0 auto;
 }
 
 /*End of header styles*/
+/*In-trend styles section*/
 
-.noemi-page {
+.in-trend{
   padding-top: 65px;
+  font-family: "Open sans", "Arial", sans-serif;
 }
 
-.main-content {
+.in-trend-header {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.in-trend-header::after {
+  content: "";
+  display: block;
+  background-color: #b59f5b;
+  opacity: 0.4;
+  width: 65px;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.in-trend-posts{
+  padding-top: 28px;
   display: flex;
+  height: 320px;
+}
+
+.in-trend-post{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 24.8%;
+  background-color: slategray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  position: relative;
+}
+
+.in-trend-post::before {
+  content: "";
+  opacity: 0.6;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.in-trend-post:nth-child(1){
+  background-image: url(../img/trend1.jpg);
+}
+
+.in-trend-post:nth-child(2) {
+  background-image: url(../img/trend2.jpg);
+}
+
+.in-trend-post:nth-child(3) {
+  background-image: url(../img/trend3.jpg);
+}
+
+.in-trend-post:nth-child(4) {
+  background-image: url(../img/trend4.jpg);
+}
+
+.in-trend-post:last-child{
+  margin-right: 0;
+}
+
+.in-trend-content{
+  position: relative;
+  border: 4px solid #b59f5b;
+  padding: 32px;
+  margin: 0 20px 20px 20px;
+}
+
+.in-trend-post-header{
+  margin-top: 3px;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color:#ffffff;
+}
+
+/*End of in-trend styles*/
+/*Main section styles*/
+
+.content {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  padding-top: 65px;
 }
 
 .posts {
@@ -202,7 +296,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-.post-additionalinfo{
+.post-additional-info{
   margin-top: 24px;
   margin-bottom: 40px;
 }
@@ -226,6 +320,126 @@ a:hover {
 }
 
 /*End of post styles*/
+/*Products styles section*/
+
+.our-products{
+  font-family: "Open sans", "Arial", sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  margin: auto auto 64px;
+}
+
+.our-products-header{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.our-products-header::after {
+  content: "";
+  display: block;
+  background-color: #b59f5b;
+  opacity: 0.4;
+  width: 65px;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.products{
+  height: 440px;
+  display: flex;
+}
+
+.product{
+  width: 30%;
+  margin-right: auto;
+  position: relative;
+}
+
+.product:last-child{
+  margin-right: 0;
+}
+
+.product-picture img{
+  width: 90%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.products-description{
+  padding: 52px 22px 70px 22px;
+  border: 4px solid #b59f5b;
+  position: absolute;
+  bottom: -12px;
+  height: 265px;
+}
+
+.product-header{
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.product-description{
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+a.product-link{
+  color: #b59f5b;
+}
+
+a.product-link:hover{
+  color: #000000;
+  cursor: pointer;
+}
+
+.product-buy{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-price{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.old-price{
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.product-button{
+  width: 140px;
+  height: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #b59f5b;
+  border: none;
+  font-size:14px;
+  text-transform: uppercase;
+  font-weight:bold;
+  color: #ffffff;
+}
+
+.product-button:hover{
+  font-size:18px;
+  cursor:pointer;
+}
+
+.product-button:focus{
+  outline: 4px solid #b59f5b;
+  outline-offset: 5px;
+}
+/*End of products styles*/
+/*Aside styles section*/
 
 .main-control {
   margin-left: auto;
@@ -245,6 +459,7 @@ a:hover {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .new-posts-heading::after {
@@ -260,7 +475,6 @@ a:hover {
 }
 
 .posts-preview {
-  margin-top: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -329,7 +543,7 @@ a:hover {
   width: 78%;
 }
 .search-button {
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+  background-image: url(../svg/search.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 18px;
@@ -357,12 +571,11 @@ a:hover {
 }
 
 .subscription {
-  margin-top: 60px;
+  margin-top: 50px;
   height: 170px;
 }
 
 .subscription-input{
-  margin-top: 20px;
   width: 100%;
   height: 50px;
   -webkit-appearance: none;
@@ -413,12 +626,11 @@ a:hover {
 }
 
 .tag-search {
-  margin-top: 55px;
+  margin-top: 50px;
   height: 160px;
 }
 
 .tag-container {
-  margin-top: 18px;
   display:flex;
   flex-wrap: wrap;
 }
@@ -473,6 +685,14 @@ a:hover {
 }
 
 /*End of aside styles*/
+/*Footer styles section*/
+
+.footer{
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  margin: auto;
+}
 
 .social-media{
   display:block;
@@ -505,35 +725,35 @@ a:hover {
 }
 
 .social-media-item:nth-child(1){
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
+  background-image: url(../svg/004-twitter.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .social-media-item:nth-child(2){
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+  background-image: url(../svg/001-pinterest.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .social-media-item:nth-child(3){
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+  background-image: url(../svg/002-facebook-logo.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .social-media-item:nth-child(4){
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+  background-image: url(../svg/005-instagram.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .social-media-item:nth-child(5){
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+  background-image: url(../svg/003-tumblr.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -541,8 +761,334 @@ a:hover {
 
 .copyright {
   margin-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
   font-family: "Open sans", "Arial", sans-serif;
   opacity: 0.6;
   font-size: 12px;
+}
+
+/*End of aside styles*/
+/*Media functions styles*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .noemi-header {
+    background-image: url(../img/banner-bg-tablet.jpg);
+  }
+
+  .header {
+    width: 100%;
+    margin: auto;
+  }
+
+  .menu-list {
+    opacity: 0;
+  }
+
+  .top-menu::before{
+    content:"";
+    display: block;
+    background-image: url("../svg/burger.svg");
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  .noemi-heading{
+    font-size: 2.5rem;
+  }
+
+  .in-trend-header {
+    font-size: 1.125rem;
+  }
+
+  .in-trend-posts{
+    flex-wrap: wrap;
+  }
+
+  .in-trend-post{
+    width:49.6%;
+    height: 240px;
+    margin-right: 0;
+  }
+
+  .in-trend-post:nth-child(2n){
+    margin-left: 0.8%;
+  }
+
+  .in-trend-post:nth-child(n+3){
+    margin-top: 4px;
+  }
+
+  .tag{
+    font-size: 0.875rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .in-trend-post-header{
+    font-size: 1.0625rem;
+  }
+
+  .content{
+    width: 100%;
+    margin-top: 180px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .posts{
+  width: 60%;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 545px;
+  }
+
+  .post-content{
+    margin-left: 0;
+  }
+
+  .post-header{
+    font-size: 1.0625rem;
+  }
+
+  .post-additional-info{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .post-content::after {
+    content: "";
+    display: block;
+    background-color: #0f0d0e;
+    opacity: 0.1;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .our-products{
+    width:100%;
+  }
+
+  .our-products-header{
+    font-size: 1.125rem;
+  }
+
+  .products{
+    flex-wrap: wrap;
+  }
+
+  .product{
+    width: 48.5%;
+    height: 462px;
+  }
+
+  .product:nth-child(n+3){
+    margin-top: 40px;
+  }
+
+  .product-header{
+    font-size: 1.0625rem;
+  }
+
+  .product-description{
+
+  }
+
+  .footer{
+    margin-top: 580px;
+    width:100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .noemi-header {
+    background-image: url(../img/banner-mobile.jpg);
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 638px;
+  }
+
+  .menu-list {
+    opacity: 0;
+  }
+
+  .top-menu::before{
+    content:"";
+    display: block;
+    background-image: url("../svg/burger.svg");
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .noemi-logo{
+    position: absolute;
+    margin: 0 auto;
+    top: 225px;
+    right: 12%;
+    width: 76%;
+    height: 60px;
+    background-size: contain;
+  }
+
+  .noemi-heading{
+    width: 100%;
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+    padding-top: 280px;
+  }
+
+  .in-trend{
+    height: 1050px;
+    padding-top: 30px;
+  }
+
+  .in-trend-header {
+    font-size: 1rem;
+  }
+
+  .in-trend-posts{
+    flex-wrap: wrap;
+  }
+
+  .in-trend-post{
+    width: 100%;
+    height: 240px;
+    margin-right: 0;
+  }
+
+
+  .in-trend-post:nth-child(n+2){
+    margin-top: 4px;
+  }
+
+  .tag{
+    font-size: 0.875rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .in-trend-post-header{
+    font-size: 1rem;
+  }
+
+  .content{
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .posts{
+    width: 100%;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 545px;
+  }
+
+  .post-content{
+    margin-left: 0;
+  }
+
+  .post-header{
+    font-size: 1rem;
+  }
+
+  .post-additional-info{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .post-content::after {
+    content: "";
+    display: block;
+    background-color: #0f0d0e;
+    opacity: 0.1;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .main-control{
+    margin-right: auto;
+  }
+
+  .our-products{
+    margin-top: 30px;
+    width:100%;
+  }
+
+  .our-products-header{
+    font-size: 1rem;
+  }
+
+  .products{
+    flex-wrap: wrap;
+  }
+
+  .product{
+    width: 100%;
+    height: 490px;
+  }
+
+  .product:nth-child(n+2){
+    margin-top: 60px;
+  }
+
+  .product-header{
+    font-size: 1rem;
+  }
+
+  .product-description{
+
+  }
+
+  .footer{
+    margin-top: 1200px;
+    width:100%;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape){
+
+  .in-trend{
+    height: 540px;
+    padding-top: 30px;
+  }
+
+  .in-trend-post{
+    width:49.6%;
+    margin-top: 0;
+  }
+
+  .in-trend-post:nth-child(2n){
+    margin-left: 0.8%;
+  }
+
+  .in-trend-post:nth-child(n+3){
+    margin-top: 4px;
+  }
 }
