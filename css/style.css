@@ -380,6 +380,7 @@ a:hover {
   flex-direction: column;
   bottom: -12px;
   min-height: 265px;
+  flex-grow: 1;
 }
 
 .product-header{
@@ -389,7 +390,6 @@ a:hover {
 }
 
 .product-description{
-  flex-grow: 1;
   font-size: 15px;
   margin-bottom: 20px;
 }
@@ -786,7 +786,7 @@ a.product-link:hover{
   }
 
   .menu-list {
-    opacity: 0;
+    display:none;
   }
 
   .top-menu::before{
@@ -929,7 +929,7 @@ a.product-link:hover{
   }
 
   .menu-list {
-    opacity: 0;
+    display:none;
   }
 
   .top-menu::before{
@@ -1075,6 +1075,7 @@ a.product-link:hover{
     width:100%;
   }
 }
+
 
 @media (max-width: 640px) and (orientation: landscape){
 
@@ -1223,9 +1224,10 @@ a.product-link:hover{
 
 .radio{
   position: absolute;
-  clip:rect(1px,1px,1px,1px);
-  height:1px;
-  width:1px;
+  visibility: visible;
+  opacity: 0;
+  width: 80px;
+  height: 25px;
 }
 
 .radio:checked ~ .radio-group-text::before{
@@ -1272,4 +1274,30 @@ a.product-link:hover{
 .modal-button:hover{
   font-size:18px;
   cursor:pointer;
+}
+
+@media (max-width: 640px){
+  .radio-group-text::before {
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .modal-window::before{
+    width: 30px;
+    height: 30px;
+    left: 360px;
+    top: -40px;
+  }
+}
+
+@media (max-width: 430px){
+  .modal-window{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-form{
+    width: 100%;
+  }
 }
