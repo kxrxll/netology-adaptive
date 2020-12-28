@@ -1195,9 +1195,10 @@ a.product-link:hover{
   -webkit-mask-size: contain;
   mask-size: contain;
   background-color: #b59f5b;
+  mask-repeat: no-repeat;
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 18px;
   top: 172px;
   right: 50px;
   z-index: 8;
@@ -1289,6 +1290,10 @@ a.product-link:hover{
     left: 360px;
     top: -40px;
   }
+  .modal-form::before {
+    top: 42%;
+    left: 85%;
+  }
 }
 
 @media (max-width: 430px){
@@ -1308,7 +1313,7 @@ a.product-link:hover{
     margin-top: 5px;
   }
   .modal-form::before {
-    top: 140px;
+    top: 42%;
     left: 85%;
   }
 }
