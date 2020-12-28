@@ -1291,7 +1291,7 @@ a.product-link:hover{
     top: -40px;
   }
   .modal-form::before {
-    top: 42%;
+    top: 170px;
     left: 85%;
   }
 }
@@ -1300,7 +1300,6 @@ a.product-link:hover{
   .modal-window{
     width: 96%;
     margin: 0;
-    padding: 0;
     padding: 4%;
   }
   .modal-form{
@@ -1313,7 +1312,7 @@ a.product-link:hover{
     margin-top: 5px;
   }
   .modal-form::before {
-    top: 42%;
+    top: 160px;
     left: 85%;
   }
 }
